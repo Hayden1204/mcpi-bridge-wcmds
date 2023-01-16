@@ -11,15 +11,17 @@ import discord
 import mcpi.minecraft as minecraft
 from discord.ext import tasks
 
+intents = discord.Intents(messages=True, message_content=True)
+
 ### CONFIG ###
-logFile = "/home/devuan/thepis/logs/ThePIs.log"
-token = "no lol"
-channelId = 1004476276532326410
-serverName = "ThePIs"
+logFile = "/home/pi/server/log.log"
+token = "TOKEN HERE"
+channelId = 1234567890
+serverName = "SERVER NAME"
 serverSoftware = "Minecraft Pi: Reborn Server"
-world = "world2"
-owner = "popdymc"
-client = discord.Client(activity = discord.Game(name = ("on "+serverName)))
+world = "world1"
+owner = "StevePi"
+client = discord.Client(activity = discord.Game(name = ("on "+serverName)), intents=intents)
 ### END CONFIG ##
 
 # Groups username
